@@ -1,0 +1,11 @@
+<h1>Welcome <%= current_user.first_name %></h1>
+
+<div>
+      <%= image_tag @user.image_url.to_s %>  
+      <div class="name"><%= @user.first_name %></div>
+</div>
+
+<%= link_to "Attempt exam" , user_exams_path(current_user.id) %>   <br>
+<%= link_to "Attempt MCQ'S" , user_mcqs_path(current_user.id) %>   <br>
+<%= link_to "Read E-Books" , user_ebooks_path(current_user.id) %>   <br>
+<%= link_to "Watch Videos" , user_videos_path(current_user.id) %>  
