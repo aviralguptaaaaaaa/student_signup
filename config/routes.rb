@@ -11,7 +11,5 @@ Rails.application.routes.draw do
     resources :mcqs
     resources :ebooks
   end
-  devise_scope :user do
-    delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
-  end
+  
 end
